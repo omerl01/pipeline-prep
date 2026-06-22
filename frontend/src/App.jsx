@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { 
   ArrowLeft, PlusCircle, Lock, LogIn, LogOut, 
@@ -214,6 +214,7 @@ export default function App() {
     if (view === 'admin' && isAdminAuthenticated) {
       fetchPending();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, isAdminAuthenticated]);
 
   // Login handler
@@ -236,7 +237,7 @@ export default function App() {
       } else {
         setLoginError(data.detail || "Access Denied: Invalid credentials.");
       }
-    } catch (err) {
+    } catch {
       setLoginError("Could not reach backend API. Make sure the backend server is running.");
     }
   };
@@ -266,7 +267,7 @@ export default function App() {
       } else {
         alert('Failed to submit question. Please verify all inputs.');
       }
-    } catch (err) {
+    } catch {
       alert('Could not connect to the backend server.');
     } finally {
       setIsSubmitting(false);
@@ -285,7 +286,7 @@ export default function App() {
       } else {
         alert('Failed to approve question.');
       }
-    } catch (err) {
+    } catch {
       alert('Error communicating with backend.');
     }
   };
@@ -303,7 +304,7 @@ export default function App() {
       } else {
         alert('Failed to delete question.');
       }
-    } catch (err) {
+    } catch {
       alert('Error communicating with backend.');
     }
   };
