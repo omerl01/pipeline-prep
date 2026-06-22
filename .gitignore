@@ -1,0 +1,25 @@
+# Virtual environment
+backend/venv/
+venv/
+.venv/
+env/
+
+# Python cache files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Databases (in case you test sqlite locally)
+*.db
+*.sqlite3
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE configurations
+.vscode/
+.idea/
+.env 

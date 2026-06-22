@@ -1,0 +1,28 @@
+# Ignore local Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore compiled Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local database sandboxes and log files
+*.db
+*.sqlite3
+*.log
+
+# Ignore Git version control metadata
+.git/
+.gitignore
+
+# Ignore local system clutter
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables files containing secrets
+.env
+.env.*
